@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    android:orientation="vertical">
+
+    <loipn.customshape.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout
+            android:id="@+id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mask="@drawable/shape_1"
+            app:porterduffxfermode="DST_IN">
+
+            <ImageView
+                android:id="@+id/imv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix" />
+
+        </com.christophesmet.android.views.maskableframelayout.MaskableFrameLayout>
+    </loipn.customshape.SquareLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:padding="5dp">
+
+            <loipn.customshape.SquareLayout
+                android:id="@+id/btnDone"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_done"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DONE"
+                    android:textColor="#ffffff" />
+            </loipn.customshape.SquareLayout>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <org.lucasr.twowayview.widget.TwoWayView
+            android:id="@+id/twoWayView"
+            style="@style/TwoWayView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#303030"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scrollbars="none"
+            app:twowayview_layoutManager="ListLayoutManager" />
+    </LinearLayout>
+</LinearLayout>
